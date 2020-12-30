@@ -5,7 +5,6 @@ A demo API demonstrating how to create a Python-based REST API with FastAPI + Ma
 
 # FastAPI
 
-<p align="center">
 <a href="https://github.com/tiangolo/fastapi/actions?query=workflow%3ATest" target="_blank">
     <img src="https://github.com/tiangolo/fastapi/workflows/Test/badge.svg" alt="Test">
 </a>
@@ -15,7 +14,7 @@ A demo API demonstrating how to create a Python-based REST API with FastAPI + Ma
 <a href="https://pypi.org/project/fastapi" target="_blank">
     <img src="https://img.shields.io/pypi/v/fastapi?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
-</p>
+
 
 FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
 
@@ -79,4 +78,4 @@ The Framework uses new event-driven compute services, like AWS Lambda, Google Cl
 
 ***github repo***: https://github.com/serverless/serverless
 
-***Documentation***: https://www.serverless.com/framework/docs/getting-started/
+***Documentation***: 
