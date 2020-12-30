@@ -6,7 +6,7 @@ provider:
   runtime: python3.6
   region: ${opt:region, 'ap-south-1'}
   stage: ${opt:stage, 'dev'}
-  role: arn:aws:iam::478963321168:role/lambda_basic_execution_role
+  role: arn:aws:iam::xxxxxxxxxxx:role/lambda_basic_execution_role
   environment:
     REGION: ${self:provider.region}
     LOG_LEVEL: ${opt:loglevel, 'INFO'}
