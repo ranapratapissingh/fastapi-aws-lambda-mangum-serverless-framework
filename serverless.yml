@@ -1,0 +1,58 @@
+service: serverless-fastapi-mangum
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: ${opt:region, 'ap-south-1'}
+  stage: ${opt:stage, 'dev'}
+  role: arn:aws:iam::478963321168:role/lambda_basic_execution_role
+  environment:
+    REGION: ${self:provider.region}
+    LOG_LEVEL: ${opt:loglevel, 'INFO'}
+    SLS_DEBUG: "*"
+
+package:
+  exclude:
+    - package.json
+    - package-lock.json
+    - node_modules/**
+    - venv/**
+    - handler.pyc
+    - .vscode/**
+    - __pycache__/**
+    - cache/**
+
+functions:
+  app:
+    handler: app.main.handler
+    events:
+      - http: ANY /
+      - http:
+          path: /{proxy+}
+          method: ANY
+          
+plugins:
+  - serverless-python-requirements
+custom:
+  pythonRequirements:
+    usePipenv: true
+    slim: true
+    zip: true
+    slimPatternsAppendDefaults: false
+    slimPatterns:
+      - "**/*.egg-info*"
+    noDeploy:
+      - boto3
+      - botocore
+      - docutils
+      - jmespath
+      - pip
+      - python-dateutil
+      - s3transfer
+      - setuptools
+      - six
+      - tensorboard
+  deploymentBucket:
+    versioning: true
+    enabled: true
