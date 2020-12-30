@@ -16,6 +16,7 @@ A demo API demonstrating how to create a Python-based REST API with FastAPI + Ma
 </a>
 
 
+
 FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.
 
 **Documentation**: <a href="https://fastapi.tiangolo.com" target="_blank">https://fastapi.tiangolo.com</a>
@@ -78,4 +79,4 @@ The Framework uses new event-driven compute services, like AWS Lambda, Google Cl
 
 ***github repo***: https://github.com/serverless/serverless
 
-***Documentation***: 
+***Documentation***: https://www.serverless.com/framework/docs/getting-started/
