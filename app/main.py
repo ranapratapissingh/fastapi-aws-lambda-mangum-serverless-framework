@@ -21,7 +21,8 @@ app = FastAPI()
 @app.get("/")
 def read_root(request: Request):
     logging.info("root url executed")
-    return {"Hello": "World", "aws_event": request.scope["aws.event"]}
+    return {"Hello": "World"}
+    # return {"Hello": "World", "aws_event": request.scope["aws.event"]}
 
 app.include_router(api_router, prefix="/api/v1")
 
