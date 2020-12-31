@@ -1,0 +1,13 @@
+version: '3.7'
+
+services: 
+  app:
+    container_name: fastapi-serverless
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn app.main:app --reload --host 0.0.0.0
+    ports:
+      - "8000:8000"
+    expose: 
+      - 8000
